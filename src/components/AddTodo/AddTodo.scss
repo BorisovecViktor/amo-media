@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.add-task {
+  position: relative;
+  margin-top: 20px;
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid $secondary-color;
+    border-right: none;
+    outline-color: $secondary-color;
+    border-radius: 5px 0 0 5px;
+    box-sizing: border-box;
+  }
+
+  &__button {
+    @include button;
+  }
+
+  &__error {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    color: $red-color;
+  }
+}

@@ -1,0 +1,38 @@
+@import "./styles/fonts";
+@import "./styles/reset";
+@import "./styles/variables";
+@import "./styles/mixins";
+
+html {
+  @include scrollbar-style;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  color: $primary-color;
+}
+
+.content {
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.todo {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.layout {
+  position: fixed;
+  transition: all $transition-duration;
+
+  &--active {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+  }
+}

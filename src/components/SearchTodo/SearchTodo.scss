@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.search {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    padding: 10px 30px 10px 5px;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline-color: $secondary-color;
+  }
+
+  &__reset {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    background-image: url("../../img/icons/close.svg");
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

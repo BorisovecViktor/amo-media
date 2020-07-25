@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.todo {
+  &__item {
+    position: relative;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $secondary-color;
+  }
+
+  &__text {
+    display: block;
+    padding: 10px;
+    color: $blue-color;
+    cursor: pointer;
+
+    &--dissabled {
+      color: $dissabled-color;
+      text-decoration: line-through;
+    }
+  }
+
+  &__remove-task {
+    @include button;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: $red-color;
+
+    &:hover {
+      background-color: #b94747;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@mixin button {
+  width: 100px;
+  padding: 5px 10px;
+  background-color: $green-color;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid $secondary-color;
+  outline-color: $secondary-color;
+  transition: all $transition-duration;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5baa0b;
+    color: #fff;
+  }
+}
+
+@mixin scrollbar-style {
+  body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: $primary-color;
+  }
+}

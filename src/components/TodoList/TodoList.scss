@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+
+.todo {
+  &__list {
+    width: 100%;
+    min-height: 200px;
+    margin-top: 20px;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+}

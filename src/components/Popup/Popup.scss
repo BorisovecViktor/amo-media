@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.popup {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 150px;
+  background-color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: all $transition-duration;
+  z-index: 2;
+
+  &--open {
+    opacity: 1;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+  }
+
+  &__button {
+    @include button;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+
+    &--red {
+      background-color: $red-color;
+
+      &:hover {
+        background-color: #b94747;
+      }
+    }
+  }
+}
